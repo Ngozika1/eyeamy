@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name of appserviceplan": {
+            "type": "string",
+            "metadata" : {
+                "description": "enter the name of appserviceplan"
+    },
+    "functions" : [],
+    "variables": {},
+    "resources": [{
+        "name": "[parameters('name of appserviceplan')]",
+        "type": "Microsoft.Web/serverfarms",
+        "apiVersion": "2022-09-01",
+        "location": "[resourceGroup().location]",
+        "sku": {
+            "name": "F1",
+            "capacity": 1
+        },
+        "tags": {
+            "displayName": "[parameters('name of appserviceplan')]"
+        },
+        "properties": {
+            "name": "('name of appserviceplan')]"
+        }
+    }],
+    "outputs": {} 
+}
